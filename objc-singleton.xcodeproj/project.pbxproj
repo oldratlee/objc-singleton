@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6055FD5D9B277CD762D70E83 /* FooSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055F90B0F82C7C567221DF4 /* FooSingleton.m */; };
+		6055F38D4246BF8B768FA266 /* NonArcMyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055F032E39DD1B477FE16C4 /* NonArcMyManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6055FD5D9B277CD762D70E83 /* MyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055F90B0F82C7C567221DF4 /* MyManager.m */; };
 		C4133CD01A6A0C580031ADBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4133CCF1A6A0C580031ADBF /* Foundation.framework */; };
 		C4133CD31A6A0C580031ADBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4133CD21A6A0C580031ADBF /* main.m */; };
 		C4133CD71A6A0C580031ADBF /* objc_singleton.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4133CD61A6A0C580031ADBF /* objc_singleton.1 */; };
@@ -27,8 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6055F90B0F82C7C567221DF4 /* FooSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooSingleton.m; sourceTree = "<group>"; };
-		6055FF458DB75D4EA9C2AB84 /* FooSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooSingleton.h; sourceTree = "<group>"; };
+		6055F032E39DD1B477FE16C4 /* NonArcMyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonArcMyManager.m; sourceTree = "<group>"; };
+		6055F90B0F82C7C567221DF4 /* MyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyManager.m; sourceTree = "<group>"; };
+		6055FC64BB54E09884BB747C /* NonArcMyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonArcMyManager.h; sourceTree = "<group>"; };
+		6055FF458DB75D4EA9C2AB84 /* MyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyManager.h; sourceTree = "<group>"; };
 		C4133CCC1A6A0C580031ADBF /* objc-singleton */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objc-singleton"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4133CCF1A6A0C580031ADBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4133CD21A6A0C580031ADBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,10 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				C4133CD21A6A0C580031ADBF /* main.m */,
-				C4133CD61A6A0C580031ADBF /* objc_singleton.1 */,
+				6055F90B0F82C7C567221DF4 /* MyManager.m */,
+				6055FF458DB75D4EA9C2AB84 /* MyManager.h */,
+				6055F032E39DD1B477FE16C4 /* NonArcMyManager.m */,
+				6055FC64BB54E09884BB747C /* NonArcMyManager.h */,
 				C4133CD41A6A0C580031ADBF /* Supporting Files */,
-				6055F90B0F82C7C567221DF4 /* FooSingleton.m */,
-				6055FF458DB75D4EA9C2AB84 /* FooSingleton.h */,
+				C4133CD61A6A0C580031ADBF /* objc_singleton.1 */,
 			);
 			path = "objc-singleton";
 			sourceTree = "<group>";
@@ -145,7 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4133CD31A6A0C580031ADBF /* main.m in Sources */,
-				6055FD5D9B277CD762D70E83 /* FooSingleton.m in Sources */,
+				6055FD5D9B277CD762D70E83 /* MyManager.m in Sources */,
+				6055F38D4246BF8B768FA266 /* NonArcMyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +265,7 @@
 				C4133CDC1A6A0C580031ADBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

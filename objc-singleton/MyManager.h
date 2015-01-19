@@ -6,6 +6,10 @@
 #import <Foundation/Foundation.h>
 
 
-@interface FooSingleton : NSObject
+@interface MyManager : NSObject
+
+@property(nonatomic, retain) NSString *someProperty;
+
++ (id)sharedManager;
 
 @end
