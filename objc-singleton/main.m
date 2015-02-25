@@ -10,16 +10,27 @@
 #import "MyManager.h"
 #import "NonArcMyManager.h"
 
+void checkSingletonOfClass(Class clazz, SEL factorySelector) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-void checkSingletonOfClass(Class clazz, SEL factorySelector) {
+    NSString *methodName = NSStringFromSelector(factorySelector);
+    NSLog(@"=========== %@", methodName);
+#ifdef DEBUG
+    if ([methodName hasPrefix:@"copy"] || [methodName hasPrefix:@"mutableCopy"]) {
+        [NSException raise:@"Assert Failed" format:@"Should not be a family method: %@", methodName];
+    }
+#endif
     // like: id singleton = [NSNull null];
     id singleton = [clazz performSelector:factorySelector];
+#pragma clang diagnostic pop
 
     id instance = [[clazz alloc] init];
     id instanceByNew = [clazz new];
 
-    NSLog(@"Class %@ singleton info: \nsingleton:     %@(%p)\ninstance:      %@(%p)\ninstanceByNew: %@(%p)",
+    NSLog(@"Class %@ singleton info: \n"
+                    "singleton:     %@(%p)\n"
+                    "instance:      %@(%p)\n"
+                    "instanceByNew: %@(%p)",
             clazz,
             singleton, (__bridge void *) singleton,
             instance, (__bridge void *) instance,
@@ -33,7 +44,6 @@ void checkSingletonOfClass(Class clazz, SEL factorySelector) {
     }
 }
 
-
 int main(int argc, const char *argv[]) {
     @autoreleasepool {
         checkSingletonOfClass([NSNull class], @selector(null));
@@ -43,5 +53,3 @@ int main(int argc, const char *argv[]) {
 
     return 0;
 }
-
-#pragma clang diagnostic pop
