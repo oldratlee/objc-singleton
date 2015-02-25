@@ -3,7 +3,6 @@
 //  objc-singleton-Tests
 //
 //  Created by Jerry Lee on 15/2/25.
-//  Copyright (c) 2015年 oldratlee.com. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
