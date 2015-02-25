@@ -21,7 +21,7 @@
 - (void)p_checkSingletonOfClass:(Class)clazz usingFactorySelector:(SEL)factorySelector {
     NSString *methodName = NSStringFromSelector(factorySelector);
     XCTAssertFalse([methodName hasPrefix:@"copy"], @"Factory selector should not be a family method: %@", methodName);
-    XCTAssertFalse([methodName hasPrefix:@"mutable"], @"Factory selector should not be a family method: %@", methodName);
+    XCTAssertFalse([methodName hasPrefix:@"mutableCopy"], @"Factory selector should not be a family method: %@", methodName);
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
