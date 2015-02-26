@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6055F38D4246BF8B768FA266 /* NonArcSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055F032E39DD1B477FE16C4 /* NonArcSingleton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6055F7699A41B969918A7FE2 /* NonArcSingletonUsingGcd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055FABE8B1E382C8D3E5139 /* NonArcSingletonUsingGcd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6055FD5D9B277CD762D70E83 /* ArcSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055F90B0F82C7C567221DF4 /* ArcSingleton.m */; };
 		C4133CD01A6A0C580031ADBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4133CCF1A6A0C580031ADBF /* Foundation.framework */; };
 		C4133CD31A6A0C580031ADBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4133CD21A6A0C580031ADBF /* main.m */; };
@@ -15,6 +16,7 @@
 		C4DAA0A11A9DD57D009D7282 /* SingletonSafetyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DAA0A01A9DD57D009D7282 /* SingletonSafetyTests.m */; };
 		C4DAA0AA1A9DE836009D7282 /* ArcSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055F90B0F82C7C567221DF4 /* ArcSingleton.m */; };
 		C4DAA0AC1A9DE836009D7282 /* NonArcSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055F032E39DD1B477FE16C4 /* NonArcSingleton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4DAA0AE1A9F188E009D7282 /* NonArcSingletonUsingGcd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6055FABE8B1E382C8D3E5139 /* NonArcSingletonUsingGcd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,9 @@
 
 /* Begin PBXFileReference section */
 		6055F032E39DD1B477FE16C4 /* NonArcSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonArcSingleton.m; sourceTree = "<group>"; };
+		6055F09CAD1A884E25C217E8 /* NonArcSingletonUsingGcd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonArcSingletonUsingGcd.h; sourceTree = "<group>"; };
 		6055F90B0F82C7C567221DF4 /* ArcSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcSingleton.m; sourceTree = "<group>"; };
+		6055FABE8B1E382C8D3E5139 /* NonArcSingletonUsingGcd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonArcSingletonUsingGcd.m; sourceTree = "<group>"; };
 		6055FC64BB54E09884BB747C /* NonArcSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonArcSingleton.h; sourceTree = "<group>"; };
 		6055FF458DB75D4EA9C2AB84 /* ArcSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcSingleton.h; sourceTree = "<group>"; };
 		C4133CCC1A6A0C580031ADBF /* objc-singleton */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objc-singleton"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,8 @@
 				6055FF458DB75D4EA9C2AB84 /* ArcSingleton.h */,
 				6055F032E39DD1B477FE16C4 /* NonArcSingleton.m */,
 				6055FC64BB54E09884BB747C /* NonArcSingleton.h */,
+				6055FABE8B1E382C8D3E5139 /* NonArcSingletonUsingGcd.m */,
+				6055F09CAD1A884E25C217E8 /* NonArcSingletonUsingGcd.h */,
 				C4133CD41A6A0C580031ADBF /* Supporting Files */,
 				C4133CD61A6A0C580031ADBF /* objc_singleton.1 */,
 			);
@@ -228,6 +234,7 @@
 				C4133CD31A6A0C580031ADBF /* main.m in Sources */,
 				6055FD5D9B277CD762D70E83 /* ArcSingleton.m in Sources */,
 				6055F38D4246BF8B768FA266 /* NonArcSingleton.m in Sources */,
+				6055F7699A41B969918A7FE2 /* NonArcSingletonUsingGcd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DAA0AE1A9F188E009D7282 /* NonArcSingletonUsingGcd.m in Sources */,
 				C4DAA0AA1A9DE836009D7282 /* ArcSingleton.m in Sources */,
 				C4DAA0AC1A9DE836009D7282 /* NonArcSingleton.m in Sources */,
 				C4DAA0A11A9DD57D009D7282 /* SingletonSafetyTests.m in Sources */,

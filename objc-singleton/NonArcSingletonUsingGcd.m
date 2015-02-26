@@ -1,21 +1,21 @@
 //
-// Created by Jerry Lee on 15/1/19.
+// Created by Jerry Lee on 15/2/26.
+// Copyright (c) 2015 oldratlee.com. All rights reserved.
 //
 
-#import "NonArcSingleton.h"
+#import "NonArcSingletonUsingGcd.h"
 
-static NonArcSingleton *sharedMyInstance = nil;
+static NonArcSingletonUsingGcd *sharedMyInstance = nil;
 
-@implementation NonArcSingleton
+@implementation NonArcSingletonUsingGcd
 
 #pragma mark Singleton Methods
 
 + (instancetype)sharedInstance {
-    @synchronized (self) {
-        if (sharedMyInstance == nil) {
-            sharedMyInstance = [[super allocWithZone:NULL] init];
-        }
-    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMyInstance = [[super allocWithZone:NULL] init];
+    });
     return sharedMyInstance;
 }
 

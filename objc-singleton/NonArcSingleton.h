@@ -9,6 +9,6 @@
 
 @property(nonatomic, retain) NSString *someProperty;
 
-+ (id)sharedManager;
++ (id)sharedInstance;
 
 @end

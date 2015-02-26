@@ -9,6 +9,9 @@
 
 @property(nonatomic, retain) NSString *someProperty;
 
-+ (id)sharedManager;
++ (id)sharedInstance;
+
+- (instancetype)init __attribute__((unavailable("Cannot use init for this class, use +(ArcSingleton*)sharedInstance instead!")));
+// NOTE: __attribute__ unavailable can NOT lead compile error of dynamic invocation @selector(performSelector:) of Class
 
 @end

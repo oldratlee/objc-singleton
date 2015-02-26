@@ -11,13 +11,13 @@
 
 #pragma mark Singleton Methods
 
-+ (id)sharedManager {
-    static ArcSingleton *sharedMyManager = nil;
++ (id)sharedInstance {
+    static ArcSingleton *sharedMyInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedMyManager = [[self alloc] init];
+        sharedMyInstance = [[self alloc] init];
     });
-    return sharedMyManager;
+    return sharedMyInstance;
 }
 
 - (id)init {
