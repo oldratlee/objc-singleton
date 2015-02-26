@@ -47,6 +47,7 @@
 		6055F09CAD1A884E25C217E8 /* NonArcSingletonUsingGcd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonArcSingletonUsingGcd.h; sourceTree = "<group>"; };
 		6055F90B0F82C7C567221DF4 /* ArcSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcSingleton.m; sourceTree = "<group>"; };
 		6055FABE8B1E382C8D3E5139 /* NonArcSingletonUsingGcd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonArcSingletonUsingGcd.m; sourceTree = "<group>"; };
+		6055FB8F02044700CEF1DF3A /* SynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = "file.h "; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		6055FC64BB54E09884BB747C /* NonArcSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonArcSingleton.h; sourceTree = "<group>"; };
 		6055FF458DB75D4EA9C2AB84 /* ArcSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcSingleton.h; sourceTree = "<group>"; };
 		C4133CCC1A6A0C580031ADBF /* objc-singleton */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objc-singleton"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +118,7 @@
 				6055F09CAD1A884E25C217E8 /* NonArcSingletonUsingGcd.h */,
 				C4133CD41A6A0C580031ADBF /* Supporting Files */,
 				C4133CD61A6A0C580031ADBF /* objc_singleton.1 */,
+				6055FB8F02044700CEF1DF3A /* SynthesizeSingleton.h */,
 			);
 			path = "objc-singleton";
 			sourceTree = "<group>";
@@ -292,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -325,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
