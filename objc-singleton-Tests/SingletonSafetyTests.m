@@ -89,7 +89,9 @@
 }
 
 - (void)test_directInvoke_compileError {
-    // __attribute__ unavailable can lead compile error of direct invocation @selector(init) of class ArcSingleton
+    /* __attribute__ unavailable can lead compile error for direct invocation @selector(init) of class ArcSingleton,
+     * so forbid user to invoke init method directly.
+     */
     // __unused ArcSingleton *instance = [[ArcSingleton alloc] init];
 }
 
