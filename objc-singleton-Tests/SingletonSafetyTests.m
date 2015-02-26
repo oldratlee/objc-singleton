@@ -7,8 +7,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import "MyManager.h"
-#import "NonArcMyManager.h"
+#import "ArcSingleton.h"
+#import "NonArcSingleton.h"
 
 @interface SingletonSafetyTests : XCTestCase
 
@@ -49,21 +49,21 @@
 #pragma mark - check singleton safety for class NonArcMyManager
 
 - (void)test_sameInstanceFromFactoryMethod_NonArcMyManager {
-    XCTAssertEqual([NonArcMyManager sharedManager], [NonArcMyManager sharedManager]);
+    XCTAssertEqual([NonArcSingleton sharedManager], [NonArcSingleton sharedManager]);
 }
 
 - (void)test_checkSingletonSafety_NonArcMyManager {
-    [self p_checkSingletonOfClass:[NonArcMyManager class] usingFactorySelector:@selector(sharedManager)];
+    [self p_checkSingletonOfClass:[NonArcSingleton class] usingFactorySelector:@selector(sharedManager)];
 }
 
 #pragma mark - check singleton safety for class MyManager
 
 - (void)test_sameInstanceFromFactoryMethod_MyManager {
-    XCTAssertEqual([MyManager sharedManager], [MyManager sharedManager]);
+    XCTAssertEqual([ArcSingleton sharedManager], [ArcSingleton sharedManager]);
 }
 
 - (void)test_checkSingletonSafety_MyManager {
-    [self p_checkSingletonOfClass:[MyManager class] usingFactorySelector:@selector(sharedManager)];
+    [self p_checkSingletonOfClass:[ArcSingleton class] usingFactorySelector:@selector(sharedManager)];
 }
 
 @end

@@ -2,17 +2,17 @@
 // Created by Jerry Lee on 15/1/17.
 //
 
-#import "MyManager.h"
+#import "ArcSingleton.h"
 
 
-@implementation MyManager
+@implementation ArcSingleton
 
 @synthesize someProperty;
 
 #pragma mark Singleton Methods
 
 + (id)sharedManager {
-    static MyManager *sharedMyManager = nil;
+    static ArcSingleton *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];

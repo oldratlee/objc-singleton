@@ -2,11 +2,11 @@
 // Created by Jerry Lee on 15/1/19.
 //
 
-#import "NonArcMyManager.h"
+#import "NonArcSingleton.h"
 
-static NonArcMyManager *sharedMyManager = nil;
+static NonArcSingleton *sharedMyManager = nil;
 
-@implementation NonArcMyManager
+@implementation NonArcSingleton
 
 @synthesize someProperty;
 

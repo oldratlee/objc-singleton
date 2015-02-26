@@ -1,11 +1,11 @@
 //
-// Created by Jerry Lee on 15/1/19.
+// Created by Jerry Lee on 15/1/17.
 //
 
 #import <Foundation/Foundation.h>
 
 
-@interface NonArcMyManager : NSObject
+@interface ArcSingleton : NSObject
 
 @property(nonatomic, retain) NSString *someProperty;
 
