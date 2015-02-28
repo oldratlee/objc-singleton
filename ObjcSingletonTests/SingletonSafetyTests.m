@@ -1,6 +1,6 @@
 //
-//  objc_singleton_Tests.m
-//  objc-singleton-Tests
+//  SingletonSafetyTests.m
+//  ObjcSingletonTests
 //
 //  Created by Jerry Lee on 15/2/25.
 //

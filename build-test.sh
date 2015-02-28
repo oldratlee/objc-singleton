@@ -4,4 +4,4 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 rm -rf build
 
-xcodebuild -target objc-singleton-Tests
+xcodebuild -target ObjcSingletonTests

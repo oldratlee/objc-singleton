@@ -1,6 +1,6 @@
 //
 //  main.m
-//  objc-singleton
+//  ObjcSingleton
 //
 //  Created by Jerry Lee on 15/1/17.
 //

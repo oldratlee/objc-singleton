@@ -31,9 +31,9 @@
 
 ### 解决使用安全
 
-在非`ARC`的实现，能保证使用安全，参见[UT代码](objc-singleton-Tests/SingletonSafetyTests.m#L67)。
+在非`ARC`的实现，能保证使用安全，参见[UT代码](ObjcSingletonTests/SingletonSafetyTests.m#L67)。
 
-`ARC`的实现中，没有解决这个问题。参见[UT代码](objc-singleton-Tests/SingletonSafetyTests.m#L88)。
+`ARC`的实现中，没有解决这个问题。参见[UT代码](ObjcSingletonTests/SingletonSafetyTests.m#L88)。
 
 详见[如何禁止一个方法的外部调用](#如何禁止一个方法的外部调用)来做些补救。
 
@@ -45,7 +45,7 @@
 - 保证实现的安全
 - 避免重复的体力劳动
 
-宏实现参见[SynthesizeSingleton.h](objc-singleton/SynthesizeSingleton.h)。
+宏实现参见[SynthesizeSingleton.h](ObjcSingleton/SynthesizeSingleton.h)。
 
 :beer: 相关资料
 ----------------------
@@ -83,7 +83,7 @@
 ```
 
 由于`__attribute__ unavailable`是在**编译时**的检查，所以不能阻止**运行时**的动态调用。  
-如在`Class`变量上进行调用（这点在[UT实现代码](objc-singleton-Tests/SingletonSafetyTests.m#L33)可以编译通过得到验证）：
+如在`Class`变量上进行调用（这点在[UT实现代码](ObjcSingletonTests/SingletonSafetyTests.m#L33)可以编译通过得到验证）：
 
 ```objc
 id instance = [[clazz alloc] init];
